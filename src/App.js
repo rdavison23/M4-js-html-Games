@@ -3,6 +3,7 @@ export default function App() {
     <div className="App">
       <h1>Hello from Techtonica</h1>
       {imageFace()}
+      {imageTail()}
     </div>
   );
 }
@@ -10,4 +11,9 @@ export default function App() {
 const face = require('./img/s801_a.jpg');
 export function imageFace() {
   return <img src={face} />;
+}
+
+const tail = require('./img/s801_b.jpg');
+export function imageTail() {
+  return <img src={tail} />;
 }
