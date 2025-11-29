@@ -1,7 +1,7 @@
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello from Techtonica</h1>
+      <h1>Heads or Tails</h1>
       {imageFace()}
       {imageTail()}
     </div>
