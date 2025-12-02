@@ -8,6 +8,8 @@ export default function App() {
   );
 }
 
+
+
 const face = require('./img/s801_a.jpg');
 export function imageFace() {
   return <img src={face} />;
