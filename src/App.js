@@ -1,16 +1,28 @@
-import React from 'react';
+import { React, useState } from 'react';
 import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
 
 export default function App() {
+  const [imageSrc, setImageSrc] = useState(face);
+  function flipCoinWithState() {
+    let randomIndex = Math.floor(Math.random() * coinFlip.length);
+    if (randomIndex == 0) {
+      setImageSrc(face);
+    } else {
+      setImageSrc(tail);
+    }
+  }
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
-      <button type="button">Click me</button>
-      <img id="coin" src={flipCoin()} alt="top" />
+      <button type="button" onClick={flipCoinWithState}>
+        Click me
+      </button>
+      <img id="coin" src={imageSrc} alt="top" />
     </div>
   );
 }
+
 export function flipCoin() {
   let randomIndex = Math.floor(Math.random() * coinFlip.length);
   if (randomIndex == 0) {
