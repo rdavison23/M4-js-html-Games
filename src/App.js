@@ -13,16 +13,16 @@ export default function App() {
 }
 
 export function imageFace() {
-    return <img src={face} alt="Heads"/>;
+  return <img src={face} alt="Heads" />;
 }
 
 export function imageTail() {
-    return <img src={tail} alt="Tails"/>;
+  return <img src={tail} alt="Tails" />;
 }
 
-const coinFlip = ["Heads", "Tails"];
+const coinFlip = ['Heads', 'Tails'];
 
 for (let i = 0; i < 10; i++) {
-    let randomIndex = Math.floor(Math.random() * coinFlip.length);
-    console.log("Flip", i + 1, ":", coinFlip[randomIndex]);
+  let randomIndex = Math.floor(Math.random() * coinFlip.length);
+  console.log('Flip', i + 1, ':', coinFlip[randomIndex]);
 }
