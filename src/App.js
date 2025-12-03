@@ -6,10 +6,18 @@ export default function App() {
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
-      {imageFace()}
-      {imageTail()}
+      <button type="button">Click me</button>
+      <img id="coin" src={flipCoin()} alt="top" />
     </div>
   );
+}
+export function flipCoin() {
+  let randomIndex = Math.floor(Math.random() * coinFlip.length);
+  if (randomIndex == 0) {
+    return face;
+  } else {
+    return tail;
+  }
 }
 
 export function imageFace() {
