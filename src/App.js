@@ -1,3 +1,7 @@
+import React from 'react';
+import face from './img/heads_a.jpg';
+import tail from './img/tails_b.jpg';
+
 export default function App() {
   return (
     <div className="App">
@@ -8,20 +12,17 @@ export default function App() {
   );
 }
 
-
-
-const face = require('./img/heads_a.jpg');
 export function imageFace() {
-  return <img src={face} />;
+    return <img src={face} alt="Heads"/>;
 }
 
-const tail = require('./img/tails_b.jpg');
 export function imageTail() {
-  return <img src={tail} />;
+    return <img src={tail} alt="Tails"/>;
 }
 
-function Square(){
-    return <button className='square'>Flip</button>;
-}
+const coinFlip = ["Heads", "Tails"];
 
-export { Square }; 
+for (let i = 0; i < 10; i++) {
+    let randomIndex = Math.floor(Math.random() * coinFlip.length);
+    console.log("Flip", i + 1, ":", coinFlip[randomIndex]);
+}
