@@ -1,8 +1,10 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color: bisque;
-  color: rgb(53, 43, 3);
+  background-color: rgb(255, 255, 255);
+  color: rgb(199, 195, 123);
+  font-size: 35px;
+  
 }
 
 #coin {
@@ -13,5 +15,6 @@
 button {
   margin: 20px auto;
   display: block;
-  color: rgb(235, 139, 13);
+  color: rgb(9, 79, 44);
+  background-color: rgb(219, 237, 180);
 }
