@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: bisque;
+  color: rgb(53, 43, 3);
+}
+
+#coin {
+  width: 200px;
+  height: auto;
+}
+
+button {
+  margin: 20px auto;
+  display: block;
+  color: rgb(235, 139, 13);
+}
