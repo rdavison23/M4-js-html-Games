@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, {useState } from 'react';
 import "./styles.css";
 import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
