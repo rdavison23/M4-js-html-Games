@@ -1,12 +1,18 @@
-import React, {useState } from 'react';
-import "./styles.css";
+import React, { useState } from 'react';
+import './styles.css';
 import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
 
 export default function App() {
+  let flipHeads = [];
+  let flipTails = [];
+
+  const [flips, setFlips] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
   function flipCoinWithState() {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
+    setFlips(flips + 1);
+    console.log(flips);
     if (randomIndex == 0) {
       setImageSrc(face);
     } else {
