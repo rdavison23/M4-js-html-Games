@@ -3,22 +3,27 @@ import './styles.css';
 import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
 
+let flipResults = [];
 export default function App() {
-  let flipHeads = [];
-  let flipTails = [];
-
+ 
   const [flips, setFlips] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
   function flipCoinWithState() {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
     setFlips(flips + 1);
     console.log(flips);
+    let currentFlip = null
     if (randomIndex == 0) {
       setImageSrc(face);
+     currentFlip = "face"
     } else {
       setImageSrc(tail);
+     currentFlip = "tail"
     }
+    flipResults.push(currentFlip)
+    console.log(flipResults)
   }
+
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
@@ -53,3 +58,5 @@ for (let i = 0; i < 10; i++) {
   let randomIndex = Math.floor(Math.random() * coinFlip.length);
   console.log('Flip', i + 1, ':', coinFlip[randomIndex]);
 }
+
+
