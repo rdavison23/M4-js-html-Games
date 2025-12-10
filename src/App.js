@@ -5,30 +5,36 @@ import tail from './img/tails_b.jpg';
 
 let flipResults = [];
 export default function App() {
- 
   const [flips, setFlips] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
-  function flipCoinWithState() {
+
+  function flipCoinWithState(isHeads) {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
-    setFlips(flips + 1);
+    setFlips(flips + 1); //when coin fliped add +1
+    console.log(isHeads);
     console.log(flips);
-    let currentFlip = null
+
+    let currentFlip = null;
     if (randomIndex == 0) {
       setImageSrc(face);
-     currentFlip = "face"
+      currentFlip = 'face';
     } else {
       setImageSrc(tail);
-     currentFlip = "tail"
+      currentFlip = 'tail';
     }
-    flipResults.push(currentFlip)
-    console.log(flipResults)
+
+    flipResults.push(currentFlip);
+    console.log(flipResults);   
   }
 
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
-      <button type="button" onClick={flipCoinWithState}>
-        Click me
+      <button type="button" onClick={() => flipCoinWithState(true)}>
+        Heads
+      </button>
+      <button type="button" onClick={() => flipCoinWithState(false)}>
+        Tails
       </button>
       <img id="coin" src={imageSrc} alt="top" />
     </div>
@@ -43,6 +49,9 @@ export function flipCoin() {
     return tail;
   }
 }
+// create two buttons one heads and one tails
+// we need to know if its heads for tails
+// if true you win if flase you lose
 
 export function imageFace() {
   return <img src={face} alt="Heads" />;
@@ -58,5 +67,3 @@ for (let i = 0; i < 10; i++) {
   let randomIndex = Math.floor(Math.random() * coinFlip.length);
   console.log('Flip', i + 1, ':', coinFlip[randomIndex]);
 }
-
-
