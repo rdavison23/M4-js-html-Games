@@ -43,14 +43,16 @@ export default function App() {
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
-      <label id = "message">{message}</label>
+      <div>
+        <label id="message">{message}</label>
+      </div>
+      <img id="coin" src={imageSrc} alt="top" />
       <button type="button" onClick={() => flipCoinWithState(true)}>
         Heads
       </button>
       <button type="button" onClick={() => flipCoinWithState(false)}>
         Tails
       </button>
-      <img id="coin" src={imageSrc} alt="top" />
     </div>
   );
 }
