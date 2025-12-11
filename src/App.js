@@ -4,9 +4,12 @@ import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
 
 let flipResults = [];
+const coinFlip = ['Heads', 'Tails'];
+
 export default function App() {
   const [flips, setFlips] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
+  const [message, setMessage] = useState('');
 
   function flipCoinWithState(isHeads) {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
@@ -14,7 +17,9 @@ export default function App() {
     console.log(isHeads);
     console.log(flips);
 
-    let currentFlip = null;
+    let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
+
+    let currentFlip;
     if (randomIndex == 0) {
       setImageSrc(face);
       currentFlip = 'face';
@@ -24,9 +29,17 @@ export default function App() {
     }
 
     flipResults.push(currentFlip);
-    console.log(flipResults);   
-  }
+    console.log(flipResults);
 
+    if (
+      (isHeads && actualResult === 'Heads') ||
+      (!isHeads && actualResult === 'Tails')
+    ) {
+      setMessage('You win!');
+    } else {
+      setMessage('You lose!');
+    }
+  }
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
@@ -60,8 +73,6 @@ export function imageFace() {
 export function imageTail() {
   return <img src={tail} alt="Tails" />;
 }
-
-const coinFlip = ['Heads', 'Tails'];
 
 for (let i = 0; i < 10; i++) {
   let randomIndex = Math.floor(Math.random() * coinFlip.length);
