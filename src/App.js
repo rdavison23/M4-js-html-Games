@@ -43,6 +43,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Heads or Tails</h1>
+      <label id = "message">{message}</label>
       <button type="button" onClick={() => flipCoinWithState(true)}>
         Heads
       </button>
@@ -62,9 +63,6 @@ export function flipCoin() {
     return tail;
   }
 }
-// create two buttons one heads and one tails
-// we need to know if its heads for tails
-// if true you win if flase you lose
 
 export function imageFace() {
   return <img src={face} alt="Heads" />;
