@@ -17,16 +17,13 @@ export default function App() {
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
 
-    let currentFlip;
     if (randomIndex == 0) {
       setImageSrc(face);
-      currentFlip = 'face';
     } else {
       setImageSrc(tail);
-      currentFlip = 'tail';
     }
 
-    flipResults.push(currentFlip);
+    flipResults.push(actualResult);
 
     if (
       (isHeads && actualResult === 'Heads') ||
