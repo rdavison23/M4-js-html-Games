@@ -47,12 +47,15 @@ export default function App() {
         <label id="message">{message}</label>
       </div>
       <img id="coin" src={imageSrc} alt="top" />
-      <button type="button" onClick={() => flipCoinWithState(true)}>
-        Heads
-      </button>
-      <button type="button" onClick={() => flipCoinWithState(false)}>
-        Tails
-      </button>
+
+      <div className="button-group">
+        <button type="button" onClick={() => flipCoinWithState(true)}>
+          Heads
+        </button>
+        <button type="button" onClick={() => flipCoinWithState(false)}>
+          Tails
+        </button>
+      </div>
     </div>
   );
 }

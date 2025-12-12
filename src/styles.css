@@ -1,10 +1,18 @@
+body {
+  background: linear-gradient(135deg, #f2b188 0%, #c997ac 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  color: rgb(199, 195, 123);
-  font-size: 35px;
-  
+  color: rgb(148, 161, 118);
+  font-size: 25px;
 }
 
 #coin {
@@ -13,8 +21,24 @@
 }
 
 button {
-  margin: 20px auto;
-  display: block;
   color: rgb(9, 79, 44);
-  background-color: rgb(219, 237, 180);
+  background-color: rgb(160, 175, 128);
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* spacing between buttons */
+  justify-content: center; /* center them horizontally */
+  margin-top: 15px;
 }
