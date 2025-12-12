@@ -54,15 +54,6 @@ export default function App() {
   );
 }
 
-export function flipCoin() {
-  let randomIndex = Math.floor(Math.random() * coinFlip.length);
-  if (randomIndex == 0) {
-    return face;
-  } else {
-    return tail;
-  }
-}
-
 export function imageFace() {
   return <img src={face} alt="Heads" />;
 }
