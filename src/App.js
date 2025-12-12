@@ -14,8 +14,6 @@ export default function App() {
   function flipCoinWithState(isHeads) {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
     setFlips(flips + 1); //when coin fliped add +1
-    console.log(isHeads);
-    console.log(flips);
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
 
@@ -29,7 +27,6 @@ export default function App() {
     }
 
     flipResults.push(currentFlip);
-    console.log(flipResults);
 
     if (
       (isHeads && actualResult === 'Heads') ||
@@ -75,9 +72,4 @@ export function imageFace() {
 
 export function imageTail() {
   return <img src={tail} alt="Tails" />;
-}
-
-for (let i = 0; i < 10; i++) {
-  let randomIndex = Math.floor(Math.random() * coinFlip.length);
-  console.log('Flip', i + 1, ':', coinFlip[randomIndex]);
 }
