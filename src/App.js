@@ -17,7 +17,7 @@ export default function App() {
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
 
-    if (randomIndex == 0) {
+    if (randomIndex === 0) {
       setImageSrc(face);
     } else {
       setImageSrc(tail);
@@ -41,7 +41,9 @@ export default function App() {
         <label id="message">{message}</label>
       </div>
       <img id="coin" src={imageSrc} alt="top" />
-
+      <div>
+        <p>Total flips: {flips}</p>
+      </div>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
           Heads
