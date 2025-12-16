@@ -5,6 +5,8 @@ import tail from './img/tails_b.jpg';
 
 let flipResults = [];
 const coinFlip = ['Heads', 'Tails'];
+const youWin = ['You win!!', 'You got this!', 'Congrats'];
+const youLose = ['try again', 'Flip again!', 'I believe in you keep going!'];
 
 export default function App() {
   const [flips, setFlips] = useState(0);
@@ -29,9 +31,11 @@ export default function App() {
       (isHeads && actualResult === 'Heads') ||
       (!isHeads && actualResult === 'Tails')
     ) {
-      setMessage('You win!');
+      let randomWin = Math.floor(Math.random() * youWin.length);
+      setMessage(youWin[randomWin]);
     } else {
-      setMessage('You lose!');
+      let randomLose = Math.floor(Math.random() * youLose.length);
+      setMessage(youLose[randomLose]);
     }
   }
   return (
