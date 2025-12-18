@@ -11,6 +11,7 @@ const youLose = ['try again', 'Flip again!', 'I believe in you keep going!'];
 export default function App() {
   const [flips, setFlips] = useState(0);
   const [wins, setWins] = useState(0);
+  const [streak, setStreak] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
   const [message, setMessage] = useState('');
 
@@ -35,9 +36,11 @@ export default function App() {
       let randomWin = Math.floor(Math.random() * youWin.length);
       setMessage(youWin[randomWin]);
       setWins(wins + 1);
+      setStreak(streak + 1);
     } else {
       let randomLose = Math.floor(Math.random() * youLose.length);
       setMessage(youLose[randomLose]);
+      setStreak(0);
     }
   }
   return (
@@ -50,6 +53,7 @@ export default function App() {
       <div>
         <p>Total flips: {flips}</p>
         <p>Total win: {wins}</p>
+        <p>Win Streak: {streak}</p>
       </div>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
