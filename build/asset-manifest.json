@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/M4-js-html-Games/static/css/main.f18abd55.css",
+    "main.js": "/M4-js-html-Games/static/js/main.6583b3dc.js",
+    "static/media/tails_b.jpg": "/M4-js-html-Games/static/media/tails_b.2a4aa5a70a181764b2fb.jpg",
+    "static/media/heads_a.jpg": "/M4-js-html-Games/static/media/heads_a.a291d2e16ffbd6668f3f.jpg",
+    "index.html": "/M4-js-html-Games/index.html",
+    "main.f18abd55.css.map": "/M4-js-html-Games/static/css/main.f18abd55.css.map",
+    "main.6583b3dc.js.map": "/M4-js-html-Games/static/js/main.6583b3dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f18abd55.css",
+    "static/js/main.6583b3dc.js"
+  ]
+}
