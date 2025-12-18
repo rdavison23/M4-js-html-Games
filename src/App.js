@@ -5,9 +5,13 @@ import tail from './img/tails_b.jpg';
 
 let flipResults = [];
 const coinFlip = ['Heads', 'Tails'];
+const youWin = ['You win!!', 'You got this!', 'Congrats'];
+const youLose = ['try again', 'Flip again!', 'I believe in you keep going!'];
 
 export default function App() {
   const [flips, setFlips] = useState(0);
+  const [wins, setWins] = useState(0);
+  const [streak, setStreak] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
   const [message, setMessage] = useState('');
 
@@ -17,7 +21,7 @@ export default function App() {
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
 
-    if (randomIndex == 0) {
+    if (randomIndex === 0) {
       setImageSrc(face);
     } else {
       setImageSrc(tail);
@@ -29,9 +33,14 @@ export default function App() {
       (isHeads && actualResult === 'Heads') ||
       (!isHeads && actualResult === 'Tails')
     ) {
-      setMessage('You win!');
+      let randomWin = Math.floor(Math.random() * youWin.length);
+      setMessage(youWin[randomWin]);
+      setWins(wins + 1);
+      setStreak(streak + 1);
     } else {
-      setMessage('You lose!');
+      let randomLose = Math.floor(Math.random() * youLose.length);
+      setMessage(youLose[randomLose]);
+      setStreak(0);
     }
   }
   return (
@@ -41,7 +50,11 @@ export default function App() {
         <label id="message">{message}</label>
       </div>
       <img id="coin" src={imageSrc} alt="top" />
-
+      <div>
+        <p>Total flips: {flips}</p>
+        <p>Total win: {wins}</p>
+        <p>Win Streak: {streak}</p>
+      </div>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
           Heads
