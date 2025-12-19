@@ -1,10 +1,18 @@
+// Import React and the useState hook for managing component state
 import React, { useState } from 'react';
-import './styles.css';
+import './styles.css'; // Import the CSS file for styling
+
+// Import the images used for the coin faces
 import face from './img/heads_a.jpg';
 import tail from './img/tails_b.jpg';
 
+// Array to store the history of flip results (not displayed but tracked)
 let flipResults = [];
+
+// Possible outcomes of a coin flip
 const coinFlip = ['Heads', 'Tails'];
+
+// List of random win messages to keep the game fun
 const youWin = [
   'You win!!',
   'Congrats',
@@ -13,6 +21,8 @@ const youWin = [
   'Boom! You crushed it!',
   'Luck is on your side!',
 ];
+
+// List of random lose messages for variety
 const youLose = [
   'Flip again!',
   'Not this time...',
@@ -22,42 +32,55 @@ const youLose = [
   'Try again, fortune favors the bold!',
 ];
 
+// Main App component
 export default function App() {
-  const [flips, setFlips] = useState(0);
-  const [wins, setWins] = useState(0);
-  const [streak, setStreak] = useState(0);
-  const [imageSrc, setImageSrc] = useState(face);
-  const [message, setMessage] = useState('Your move: heads or tails?');
+  // State variables to track game stats and UI updates
+  const [flips, setFlips] = useState(0); // total number of flips
+  const [wins, setWins] = useState(0); // total number of correct guesses
+  const [streak, setStreak] = useState(0); // current win streak
+  const [imageSrc, setImageSrc] = useState(face); // current coin image
+  const [message, setMessage] = useState('Your move: heads or tails?'); // message shown to player
 
+  // Function that runs every time the user clicks Heads or Tails
   function flipCoinWithState(isHeads) {
+    // Generate a random index (0 or 1) to simulate a coin flip
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
     setFlips(flips + 1); //when coin fliped add +1
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
 
+    // Update the displayed coin image based on the result
     if (randomIndex === 0) {
       setImageSrc(face);
     } else {
       setImageSrc(tail);
     }
 
+    // Store the result in the history array
     flipResults.push(actualResult);
 
+    // Check if the player's guess matches the actual result
     if (
       (isHeads && actualResult === 'Heads') ||
       (!isHeads && actualResult === 'Tails')
     ) {
+      // Player guessed correctly choose a random win message
       let randomWin = Math.floor(Math.random() * youWin.length);
       setMessage(youWin[randomWin]);
+
+      // Update wins and streak
       setWins(wins + 1);
       setStreak(streak + 1);
     } else {
       let randomLose = Math.floor(Math.random() * youLose.length);
       setMessage(youLose[randomLose]);
+
+      // Reset streak to zero
       setStreak(0);
     }
   }
   return (
+    //what the user sees on the screen
     <div className="App">
       <h1>Heads or Tails</h1>
       <div>
