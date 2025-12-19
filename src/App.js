@@ -68,7 +68,7 @@ export default function App() {
         <p>Total flips: {flips}</p>
         <p>Total wins: {wins}</p>
         <p>Win Streak: {streak}</p>
-      </div>{' '}
+      </div>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
           Heads
