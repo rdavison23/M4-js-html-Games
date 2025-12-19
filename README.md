@@ -32,6 +32,12 @@ Stats are tracked automatically:
 1. Real-time tracking of flips, wins, and streaks.
 1. Simple, interactive UI built with React hooks (`useState`).
 
+## Deploy to GitHub Pages
+
+```sh
+npm run deploy
+```
+
 ## image attribution
 
 [George Washington Presidential Silver Medal](https://www.usmint.gov/george-washington-presidential-silver-medal-S801.html)
