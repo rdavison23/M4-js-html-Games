@@ -42,3 +42,15 @@ button {
   justify-content: center; /* center them horizontally */
   margin-top: 15px;
 }
+
+#message {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: rgba(148, 157, 127, 0.046);
+  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.213);
+  transition: all 0.3s ease;
+}
