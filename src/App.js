@@ -27,7 +27,7 @@ export default function App() {
   const [wins, setWins] = useState(0);
   const [streak, setStreak] = useState(0);
   const [imageSrc, setImageSrc] = useState(face);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('Your move: heads or tails?');
 
   function flipCoinWithState(isHeads) {
     let randomIndex = Math.floor(Math.random() * coinFlip.length);
@@ -69,7 +69,6 @@ export default function App() {
         <p>Total wins: {wins}</p>
         <p>Win Streak: {streak}</p>
       </div>{' '}
-      <p>Your move: heads or tails?</p>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
           Heads
