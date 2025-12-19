@@ -58,19 +58,19 @@ button {
   padding: 10px 20px;
   border-radius: 12px;
   background: rgba(148, 157, 127, 0.046);
-  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.213);
+  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.376);
   transition: all 0.3s ease;
 }
 
 /* Stats box styling */
 .totals {
-  background: #9d865832;
+  background: #b3ac8413;
   font-size: 18px;
   width: fit-content;
   height: fit-content;
   padding: 10px 20px;
   border-radius: 8px;
   margin: auto;
-  border: 2px solid #c6937f22;
-  box-shadow: 0 6px 15px #dd987071;
+  border: 2px solid #c6937f12;
+  box-shadow: 0 6px 15px #dd98703c;
 }
