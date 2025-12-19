@@ -1,4 +1,4 @@
-# M4-js-html-Games
+# Project - React Game
 
 ## Heads or Tails
 
