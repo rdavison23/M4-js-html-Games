@@ -19,7 +19,7 @@ body {
 
 /* Coin image size */
 #coin {
-  width: 200px;
+  width: 253px;
   height: auto;
 }
 
@@ -53,12 +53,13 @@ button {
 #message {
   display: inline-block;
   font-size: 1.2rem;
+  color: #f19f7eef;
   font-weight: bold;
   margin: 15px 0;
   padding: 10px 20px;
   border-radius: 12px;
-  background: rgba(148, 157, 127, 0.046);
-  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.376);
+  background: rgba(157, 148, 127, 0.046);
+  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.433);
   transition: all 0.3s ease;
 }
 
