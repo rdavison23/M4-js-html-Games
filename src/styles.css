@@ -54,3 +54,15 @@ button {
   box-shadow: 0 4px 10px rgba(241, 151, 102, 0.213);
   transition: all 0.3s ease;
 }
+
+.totals {
+  background: #ae935d25;
+  font-size: 18px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: auto;
+  border: 2px solid #c6a57f22;
+  box-shadow: 0 6px 15px #dd987084;
+}

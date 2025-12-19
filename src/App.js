@@ -64,9 +64,9 @@ export default function App() {
         <label id="message">{message}</label>
       </div>
       <img id="coin" src={imageSrc} alt="top" />
-      <div>
-        <p>Total flips: {flips}</p>
-        <p>Total wins: {wins}</p>
+      <div className="totals">
+        <p>Total Flips: {flips}</p>
+        <p>Total Wins: {wins}</p>
         <p>Win Streak: {streak}</p>
       </div>
       <div className="button-group">
