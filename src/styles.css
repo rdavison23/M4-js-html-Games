@@ -1,3 +1,4 @@
+/* Page background with centered layout */
 body {
   background: linear-gradient(135deg, #f2b188 0%, #c997ac 100%);
   min-height: 100vh;
@@ -7,6 +8,7 @@ body {
   padding: 30px;
 }
 
+/* Main app container styling */
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -15,11 +17,13 @@ body {
   font-size: 25px;
 }
 
+/* Coin image size */
 #coin {
-  width: 200px;
+  width: 253px;
   height: auto;
 }
 
+/* Button appearance */
 button {
   color: rgb(9, 79, 44);
   background-color: rgb(160, 175, 128);
@@ -29,6 +33,7 @@ button {
   border-radius: 5px;
 }
 
+/* Global reset for spacing and layout consistency */
 * {
   margin: 0;
   padding: 0;
@@ -36,9 +41,37 @@ button {
   padding: 20px;
 }
 
+/* Button container layout */
 .button-group {
   display: flex;
   gap: 10px; /* spacing between buttons */
   justify-content: center; /* center them horizontally */
   margin-top: 15px;
+}
+
+/* Message box styling */
+#message {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #f19f7eef;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: rgba(157, 148, 127, 0.046);
+  box-shadow: 0 4px 10px rgba(241, 151, 102, 0.433);
+  transition: all 0.3s ease;
+}
+
+/* Stats box styling */
+.totals {
+  background: #b3ac8413;
+  font-size: 18px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: auto;
+  border: 2px solid #c6937f12;
+  box-shadow: 0 6px 15px #dd98703c;
 }
