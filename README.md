@@ -1,5 +1,11 @@
 # Project - React Game
 
+## Tech Stack
+
+- React (functional components + hooks)
+- JavaScript
+- CSS (custom styling)
+
 ## Heads or Tails
 
 A simple and fun coin-flip game built with React. Test your luck by guessing Heads or Tails and see if you can build a winning streak!
@@ -8,7 +14,10 @@ A simple and fun coin-flip game built with React. Test your luck by guessing Hea
 
 The game displays a coin and asks: "Your move: heads or tails?"
 
+## Live Demo
+
 You can also play directly from [GitHub](https://rdavison23.github.io/M4-js-html-Games/).
+
 Choose either:
 
 - Heads → click the Heads button
