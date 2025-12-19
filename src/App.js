@@ -5,8 +5,22 @@ import tail from './img/tails_b.jpg';
 
 let flipResults = [];
 const coinFlip = ['Heads', 'Tails'];
-const youWin = ['You win!!', 'You got this!', 'Congrats'];
-const youLose = ['try again', 'Flip again!', 'I believe in you keep going!'];
+const youWin = [
+  'You win!!',
+  'Congrats',
+  'You nailed it!',
+  'Winner winner, coin-flip dinner!',
+  'Boom! You crushed it!',
+  'Luck is on your side!',
+];
+const youLose = [
+  'Flip again!',
+  'Not this time...',
+  'Oof, close one!',
+  'Keep flipping, your luck will turn!',
+  'Missed it — but don’t give up!',
+  'Try again, fortune favors the bold!',
+];
 
 export default function App() {
   const [flips, setFlips] = useState(0);
@@ -52,9 +66,10 @@ export default function App() {
       <img id="coin" src={imageSrc} alt="top" />
       <div>
         <p>Total flips: {flips}</p>
-        <p>Total win: {wins}</p>
+        <p>Total wins: {wins}</p>
         <p>Win Streak: {streak}</p>
-      </div>
+      </div>{' '}
+      <p>Your move: heads or tails?</p>
       <div className="button-group">
         <button type="button" onClick={() => flipCoinWithState(true)}>
           Heads
