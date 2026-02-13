@@ -44,7 +44,7 @@ export default function App() {
   // Function that runs every time the user clicks Heads or Tails
   function flipCoinWithState(isHeads) {
     // Generate a random index (0 or 1) to simulate a coin flip
-    let randomIndex = Math.floor(Math.random() * coinFlip.length);
+    let randomIndex = 0;
     setFlips(flips + 1); //when coin fliped add +1
 
     let actualResult = coinFlip[randomIndex]; // "Heads" or "Tails"
