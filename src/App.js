@@ -62,7 +62,7 @@ export default function App() {
     // Check if the player's guess matches the actual result
     if (
       (isHeads && actualResult === 'Heads') ||
-      (!isHeads && actualResult === 'Tails')
+      (!isHeads && actualResult === 'tails')
     ) {
       // Player guessed correctly choose a random win message
       let randomWin = Math.floor(Math.random() * youWin.length);
